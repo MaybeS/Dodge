@@ -31,7 +31,7 @@ class OpGgSpider(scrapy.Spider):
         def _extract_info(node):
             def _rank_to_mmr(rank):
                 ranks = ['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum',
-                        'Diamond', 'Master', 'GrandMaster', 'Challenger']
+                        'Diamond', 'Master', 'Grandmaster', 'Challenger']
                 rank_name, *rank_index = rank.split(' ')
                 rank_index, *_ = rank_index or (0,)
 
