@@ -16,7 +16,7 @@ class Connection:
             self.queue.append('Maydev')
 
     def commit(self):
-        self.connector.set('crawl-queue', json.dumps(list(self.queue)))
+        self.connector.set('crawl-queue', json.dumps(list(set(self.queue))))
 
     def get_champion(self, champion: str):
         prefix = 'champion'
